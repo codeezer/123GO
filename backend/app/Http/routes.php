@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 Route::get('bus-details/{id}','vehicleController@view');
 
-Route::post('bus-details',function(Request $request){
+Route::post('bus-details',function(){
     
     #$data = Request::json()->all()
 
@@ -29,6 +29,7 @@ Route::post('bus-details',function(Request $request){
 
     dd($data_array->id);
 
+    
 });
 
 
