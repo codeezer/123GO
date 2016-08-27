@@ -16,25 +16,20 @@ Route::get('/', function () {
 });
 
 
+Route::get('bus-details/{id}','vehicleController@view');
 
+Route::post('bus-details',function(Request $request){
+    
+    #$data = Request::json()->all()
 
+    $content = Request::all();
+    $raw_data = Response::json($content);
+    
+    $data_array = json_decode($raw_data->content());
 
-//Route::get('rbus-location','locationController@view');
-
-Route::get('rbus-location/{id}',function($id){
-
-	    $v_details = App\Bus::find($id);
-    	
-        echo $v_details->v_no .' @ '. $v_details->c_location;
-    	#echo 'hello';
+    dd($data_array->id);
 
 });
-
-
-//Route::get('wbus-location', 'locationController@update');
-
-
-
 
 
 
