@@ -27,8 +27,8 @@ class vehicleController extends Controller
     public function test($id){
 
         if ($id == 2){
-            $two = '{"id":2,"v_no":"Ba 2 Ka 8340","p_location":"23:67","c_location":"90:89","type":"Micro Bus","status":"Yellow","capacity":"25"}';
-            return $two;}
+            $two = array("id"=>2,"v_no"=>"Ba 2 Ka 8340","p_location"=>"23:67","c_location"=>"90:89","type"=>"Micro Bus","status"=>"Yellow","capacity"=>"25");
+            echo (json_encode($two));}
 
         if ($id == 1){
             $one = '{"id":1,"v_no":"Ba 3 Kha 8320","p_location":"67:89","c_location":"47:89","type":"Mini Bus","status":"Red","capacity":"35"}';
