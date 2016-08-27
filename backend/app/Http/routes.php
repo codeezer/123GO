@@ -27,8 +27,11 @@ Route::post('bus-details',function(){
     
     $data_array = json_decode($raw_data->content());
 
-    dd($data_array->id);
+    $id = $data_array->id;
 
+    $c_location = $data_array->c_location;
+
+    DB::update('update vehicle_info set p_location = c_location, c_location = ? where id = ?', [$c_location, $id]);
     
 });
 
