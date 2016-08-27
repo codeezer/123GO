@@ -17,12 +17,17 @@ Route::get('/', function () {
 
 
 
+
+
 //Route::get('rbus-location','locationController@view');
+
 Route::get('rbus-location/{id}',function($id){
 
-	    $bus_location = App\Bus::find($id);
-    	echo $bus_location->bus_no .' @ '. $bus_location->location;
+	    $v_details = App\Bus::find($id);
+    	
+        echo $v_details->v_no .' @ '. $v_details->c_location;
     	#echo 'hello';
+
 });
 
 

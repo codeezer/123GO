@@ -14,9 +14,9 @@ class locationController extends Controller
     	# code...
     	$bus_location = App\Bus::find(1);
 
-    	#print_r($bus_location);
+    	print_r($bus_location);
 
-    	echo 'hello';
+    	#echo 'hello';
     }
 
 }
