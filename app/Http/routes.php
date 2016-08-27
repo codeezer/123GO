@@ -36,6 +36,7 @@ Route::put('bus-details',function(){
 });
 
 
+Route::get('go/{id}','vehicleController@test');
 
 
 
