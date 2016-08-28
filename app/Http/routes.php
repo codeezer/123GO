@@ -18,6 +18,10 @@ Route::get('/', function () {
 
 Route::get('bus-details/{id}','vehicleController@view');
 
+Route::get('bus-all','vehicleController@view_all');
+
+Route::get('test-all','vehicleController@test_all');
+
 Route::put('bus-details',function(){
     
     #$data = Request::json()->all()
@@ -38,6 +42,8 @@ Route::put('bus-details',function(){
 
 Route::get('go/{id}','vehicleController@test');
 
+
+Route::resource('goo', 'VehicleController');
 
 
 
